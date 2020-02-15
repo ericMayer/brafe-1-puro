@@ -1,0 +1,62 @@
+/* Resetando algumas propriedas padrões do HTML */
+
+body, h1, h2, h3, p, ul {
+    padding: 0%;
+    margin: 0%;
+}
+
+body {
+    font-family: Georgia, serif;
+    color: #252525;
+}
+
+/* Finalizando o Reset */
+
+/* Menu */
+
+.menu {
+    background: #252525;
+    padding: 20px 0; /* espaçamento para cima e para baixa */
+    
+}
+
+.menu-container {
+    max-width: 960px; /* tamanho máximo da largura */
+    margin: 0 auto; /* sem margem para cima e para baixo, porém para esquerda e direita margem automática para centralizar o conteúdo */
+    
+}
+
+.menu-container::before, .menu-container::after {
+    /* usando o clearfix para limpar os floats que serão utilizados, para assim conseguir fazer os elementos flutuarem a esquerda e a direita */
+    content: '';
+    display: table;
+    clear: both;
+}
+
+a.menu-logo {
+    display: block;
+    float: left;
+    /* como o logo está como display block significa que ele irá pegar todo o conteúdo no caso os 960px de largura, agora como foi definido o float nele esse tamanho dele irá diminuir para apenas o próprio tamanho do elemento no caso a imagem do logo e caso aumente o tamanho do logo ou adicione outro conteúdo esse tamanho irá crescer */
+    margin-left: 10px;
+}
+
+.menu-nav {
+    float: right;
+    margin-right: 10px;
+}
+
+.menu-nav li {
+    display: inline-block;
+}
+
+.menu-nav a {
+    display: block;
+    padding: 10px;
+    text-decoration: none; /* tirando a decoração em azul de links */
+    color: #fff;
+    font-size: 1.125em; /* 18 px, apenas pegar 18 é dividir pela padrão de tamanho da fonte dos navegadores que é 16 */
+}
+
+
+
+/* Fim Menu */
