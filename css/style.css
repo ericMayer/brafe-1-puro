@@ -90,3 +90,67 @@ a.menu-logo {
 }
 
 /* Fim Introdução */
+
+
+/* Sobre */
+
+.sobre {
+    margin: 60px auto;
+}
+
+.sobre-container {
+    max-width: 960px; /* tamanho máximo da largura */
+    margin: 0 auto; /* sem margem para cima e para baixo, porém para esquerda e direita margem automática para centralizar o conteúdo */
+    
+}
+
+.sobre-container::before, .sobre-container::after {
+    /* usando o clearfix para limpar os floats que serão utilizados, para assim conseguir fazer os elementos flutuarem a esquerda e a direita */
+    content: ''; /* pseudo elementos precisam ter um conteúdo por padrão, se não não funcionam. Os '' é usado para que o Opera entenda que é um conteúdo, em outros navegadores, pode ser usados as "" */
+    display: table;
+    clear: both;
+}
+
+.sobre h2 {
+    font-size: 2.25em;
+    text-align: center;
+    margin-bottom: 60px;
+    
+}
+
+.sobre-cafe {
+    width: 460px;
+    float: left;
+    margin: 0 10px;
+}
+
+.sobre-cafe img {
+    display: block; /* irá ocupar apenas o espaço da imagem, por padrão nos navegadores é adicionado um tamanho a mais na imagem, por causa da tag img */
+    max-width: 100%;
+
+}
+
+.sobre-cafe h3 {
+    font-size: 2.25em;
+    line-height: 1em;
+    color: #fff;
+    background-color: #252525;
+    width: 220px;
+    padding: 10px;
+    text-align: center;
+    font-weight: normal;
+    font-style: italic;
+    position: relative; /* definindo posição do elemento relativa a ele mesmo, para que conseguir usar o top, quando a posição é relativa o conteúdo do elemento pode estar em outro lugar, porém ainda ocupa o espaço original */
+    top: -20px; /* para subir o conteúdo */
+}
+
+.sobre > p { /* falando sobre com o p que está dentro da classe sobre */
+    max-width: 460px; /* definindo o tamanho máximo para que o conteúdo não fique muito grande */
+    text-align: center;
+    font-size: 1.125em;
+    line-height: 1.4em; /* geralmente por padrão o espaçamento da quebra de linha do texto é em torno de 1.3em 1.4em 1.5.em. 1.6em */
+    font-style: italic;
+    margin: 20px auto; /* alinhando o conteúdo ao centro é dando uma margem para cima e para baixo */
+}
+
+/* Fim Sobre */
