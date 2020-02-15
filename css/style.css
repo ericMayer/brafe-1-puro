@@ -28,7 +28,7 @@ body {
 
 .menu-container::before, .menu-container::after {
     /* usando o clearfix para limpar os floats que serão utilizados, para assim conseguir fazer os elementos flutuarem a esquerda e a direita */
-    content: '';
+    content: ''; /* pseudo elementos precisam ter um conteúdo por padrão, se não não funcionam. Os '' é usado para que o Opera entenda que é um conteúdo, em outros navegadores, pode ser usados as "" */
     display: table;
     clear: both;
 }
@@ -36,7 +36,7 @@ body {
 a.menu-logo {
     display: block;
     float: left;
-    /* como o logo está como display block significa que ele irá pegar todo o conteúdo no caso os 960px de largura, agora como foi definido o float nele esse tamanho dele irá diminuir para apenas o próprio tamanho do elemento no caso a imagem do logo e caso aumente o tamanho do logo ou adicione outro conteúdo esse tamanho irá crescer */
+    /* como o logo está como display block significa que ele irá pegar todo o conteúdo no caso os 960px de largura, agora como foi definido o float nele esse tamanho dele irá diminuir para apenas o próprio tamanho do elemento no caso a imagem do logo e caso aumente o tamanho do logo ou adicione outro conteúdo esse tamanho irá crescer, um elemento com float ignora o height do seu pai, nesse caso a div menu-container, como ele ignora a altura do seu pai ele passa a ser 0, por isso buga o conteúdo e não exibe. Por esses motivos é necessário utilizar o clearfix para limpar a flutuação */
     margin-left: 10px;
 }
 
@@ -50,13 +50,43 @@ a.menu-logo {
 }
 
 .menu-nav a {
-    display: block;
+    display: block; /* por padrão a tag a é inline, por isso está sendo alterada para block */
     padding: 10px;
     text-decoration: none; /* tirando a decoração em azul de links */
     color: #fff;
     font-size: 1.125em; /* 18 px, apenas pegar 18 é dividir pela padrão de tamanho da fonte dos navegadores que é 16 */
 }
 
-
-
 /* Fim Menu */
+
+/* Introdução */
+
+.introducao {
+    background: url('../img/bg-intro.jpg') no-repeat center center; /* centralizando para cima e para baixo e para a direita e para esquerda*/
+    background-size: cover; /* sempre irá pegar 100% do tamanho da tela */
+    padding: 150px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.introducao h1 {
+    font-size: 3em;
+    text-transform: uppercase;
+}
+
+.introducao h1::after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 4px;
+    background-color: #fff;
+    margin: 10px auto;
+    
+}
+
+.introducao p {
+    font-size: 1.125em;
+    font-style: italic;
+}
+
+/* Fim Introdução */
