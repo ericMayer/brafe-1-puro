@@ -154,3 +154,83 @@ a.menu-logo {
 }
 
 /* Fim Sobre */
+
+/* Produtos */
+
+.cafe {
+
+    background-color: #E7E4D8;
+    padding: 60px 0;
+
+    border-top: 3px solid #D6D3C8;
+    border-bottom: 3px solid #D6D3C8;
+}
+
+.cafe-container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.cafe-container::before, .cafe-container::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.cafe-tipos {
+    width: 300px;
+    float: left;
+    margin: 0 10px 20px 10px; /* colocando 20px para baixo, pois quando for adptado o site para responsivo ficará melhor com esse espaçamento*/
+}
+
+.cafe-tipos h2 {
+    font-size: 2.25em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.cafe-tipos h2::before {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 100px;
+    background: currentColor; /* pegando a cor que está como padrão */
+    border-radius: 50%; /* se a borda-radius for 50% do tamanho total da largura e altura é criado uma figura redonda */
+    margin: 20px auto;
+    border: 5px solid #E7E4D8;
+    box-shadow: 0 0 0 5px currentColor; /* definindo que terá uma sombra com o tamanho de 10px e informando que irá pegar a color que está definida por padrão */
+}
+
+h2.cafe-paulista { /* adicionado junto com o before apenas os círculos irão pegar a cor, agora sem o before o texto também irá pegar essa cor */
+    color: #492901;
+}
+
+h2.cafe-carioca {
+    color: #C17139;
+}
+
+h2.cafe-mineiro {
+    color: #D7A54D;
+}
+
+.cafe-tipos p {
+    font-size: 1.125em;
+    line-height: 1.4em;
+
+}
+
+.cafe-botao {
+    width: 180px;
+    border: 3px solid;
+    display: block; /* alterando para block, pois por padrão o botão é inline, isso também ajuda o botão ocupar todo o espaço dele e não apenas até onde vai o conteúdo*/
+    text-decoration: none; /* tirando o estilo que veem padrão no botão */
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.125em;
+    padding: 15px 0;
+    color: #252525;
+    margin: 20px auto 0 auto; /* definindo margem de 20px para cima e para a direita e esquerda automático para alinha o botão ao centro */
+}
+
+/* Fim Produtos */
