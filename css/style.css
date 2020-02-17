@@ -10,6 +10,10 @@ body {
     color: #252525;
 }
 
+* {
+    box-sizing: border-box; /* definindo que em todo o site quando definir o tamanho de um elemento, por exemplo um link com 200px e nesse link eu adicionar uma borda, um padding esse valor não será somado mais aos 200px do tamanho e sim será incluso nos 200px de tamanho */
+}
+
 /* Finalizando o Reset */
 
 /* Menu */
@@ -238,7 +242,7 @@ h2.cafe-mineiro {
 /* Locais */
 
 .lojas {
-    width: 960px;
+    max-width: 960px;
     margin: 0 auto;
 }
 
@@ -281,10 +285,112 @@ h2.cafe-mineiro {
     font-size: 1.125em;
     text-decoration: none;
     text-transform: uppercase;
-    color: #252525;
+    color: #252525; /* definindo a cor, porquê a tag a não pega a cor padrão */
     border: 3px solid;
     padding: 10px 20px;
     
 }
 
 /* Fim Locais */
+
+
+/* Newsletter */
+
+.newsletter {
+    background-color: #E7E4D8;
+    padding: 20px 0;
+}
+
+.newsletter-container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.newsletter-container::before, .newsletter-container::after { /* clear fix */
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.newsletter-info {
+    width: 460px;
+    float: left;
+    margin: 0 10px;
+}
+
+.newsletter-info h2 {
+    font-size: 2.25em;
+    margin-bottom: 10px;
+}
+
+.newsletter-info p {
+    font-size: 1.5em;
+    font-style: italic;
+}
+
+.newsletter form {
+    width: 460px;
+    float: left;
+    margin: 10px 10px 0 10px; /* colocando 10px para cima para que o form fica posicionado um pouca mais abaixo para ficar bem ao lado do newsletter */
+}
+
+.newsletter form input { /* não pega as configurações de cores padrões, por ser input e também não pega a font, por isso é necessário definir isso */
+    background-color: #E7E4D8;
+    border: 3px solid;
+    font-family: Georgia, serif;
+    padding: 10px; /* para aumentar o input e dar um espaço no texto para o lado */
+    width: 320px;
+    font-size: 1.5em;
+    color: #252525;
+    float: left;
+    outline: none; /* tirando um azul que fica quando está selecionado o input */
+}
+
+.newsletter form button {
+    width: 140px;
+    color: #fff;
+    background-color: #252525;
+    float: left;
+    font-size: 1.5em;
+    font-family: Georgia, serif;
+    padding: 13px;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer; /* quando passar o cursor por cima dele irá ficar com o cursor clicável */
+    outline: none; /* tirando um azul que fica quando clicado o botão */
+}
+
+/* Fim Newsletter */
+
+/* Rodapé */
+
+.rodape {
+    background-color: #D6D3C8;
+    padding: 20px 0;
+}
+
+.rodape-container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.rodape-container::before,  .rodape-container::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.rodape-container p {
+    font-size: 1.125em;
+    line-height: 1.4em;
+    margin: 0 10px;
+    float: left;
+}
+
+.rodape-container img {
+    float: right;
+    margin: 0 10px;
+    display: block;
+}
+
+/* Fim Rodapé */
