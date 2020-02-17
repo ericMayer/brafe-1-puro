@@ -234,3 +234,57 @@ h2.cafe-mineiro {
 }
 
 /* Fim Produtos */
+
+/* Locais */
+
+.lojas {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.lojas-locais {
+    margin: 60px auto;
+}
+
+.lojas-locais::before, .lojas-locais::after { /* clear fix */
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.lojas-locais img {
+    width: 460px;
+    float: left;
+    margin: 0 10px;
+    display: block;
+}
+
+.lojas-locais > div {
+    width: 460px;
+    margin: 0 10px;
+    float: left;
+}
+
+.lojas-locais h2 {
+    font-size: 2.25em;
+    margin-bottom: 20px;
+}
+
+.lojas-locais p {
+    font-size: 1.125em;
+    line-height: 1.4em;
+    margin-bottom: 40px;
+    max-width: 320px; /* para o texto não ficar muito grande e dificultar a leitura */
+}
+
+.lojas-locais a {
+    font-size: 1.125em;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #252525;
+    border: 3px solid;
+    padding: 10px 20px;
+    
+}
+
+/* Fim Locais */
