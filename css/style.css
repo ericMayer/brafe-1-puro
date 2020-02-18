@@ -1,3 +1,10 @@
+/* Responsivo 
+
+    960px
+    740px
+*/
+
+
 /* Resetando algumas propriedas padrões do HTML */
 
 body, h1, h2, h3, p, ul {
@@ -61,6 +68,23 @@ a.menu-logo {
     font-size: 1.125em; /* 18 px, apenas pegar 18 é dividir pela padrão de tamanho da fonte dos navegadores que é 16 */
 }
 
+@media only screen and (max-width: 739px) {
+    .menu {
+        text-align: center;
+    }
+
+    .menu-nav {
+        float: none; /* tirando a flutuação para os elementos não ficarem mais lado a lado */
+        clear: both; /* limpando a flutuação para caso o menu precise descer, desça automaticamente */
+    }
+
+    a.menu-logo {
+        float: none;
+        clear: both;
+        margin: 0 auto;
+    }
+}
+
 /* Fim Menu */
 
 /* Introdução */
@@ -91,6 +115,12 @@ a.menu-logo {
 .introducao p {
     font-size: 1.125em;
     font-style: italic;
+}
+
+@media only screen and (max-width: 739px) {
+    .introducao {
+        padding: 60px 0;
+    }
 }
 
 /* Fim Introdução */
@@ -155,6 +185,27 @@ a.menu-logo {
     line-height: 1.4em; /* geralmente por padrão o espaçamento da quebra de linha do texto é em torno de 1.3em 1.4em 1.5.em. 1.6em */
     font-style: italic;
     margin: 20px auto; /* alinhando o conteúdo ao centro é dando uma margem para cima e para baixo */
+}
+
+@media only screen and (min-width: 740px) and (max-width: 980px) {
+    .sobre-container {
+        max-width: 720px; /* é definido 20 px a mais na quebra, pois no geral as barras de rolagem têm esse valor de tamanho da barra e o browser considera esse um valor do seu site */
+    }
+
+    .sobre-cafe {
+      width: 340px;
+    }
+}
+
+@media only screen and (max-width: 739px) {
+    .sobre-container {
+        max-width: 300px
+    }
+
+    .sobre-cafe {
+        width: 300px;
+        margin: 0 auto;
+    }
 }
 
 /* Fim Sobre */
@@ -237,6 +288,26 @@ h2.cafe-mineiro {
     margin: 20px auto 0 auto; /* definindo margem de 20px para cima e para a direita e esquerda automático para alinha o botão ao centro */
 }
 
+@media only screen and (min-width: 740px) and (max-width: 980px) {
+    .cafe-container {
+        max-width: 720px; /* é definido 20 px a mais na quebra, pois no geral as barras de rolagem têm esse valor de tamanho da barra e o browser considera esse um valor do seu site */
+    }
+
+    .cafe-tipos {
+      width: 220px;
+    }
+}
+
+@media only screen and (max-width: 739px) {
+    .cafe-container {
+        max-width: 300px
+    }
+
+    .cafe-tipos {
+        margin: 0 auto 20px auto;
+    }
+}
+
 /* Fim Produtos */
 
 /* Locais */
@@ -289,6 +360,28 @@ h2.cafe-mineiro {
     border: 3px solid;
     padding: 10px 20px;
     
+}
+
+@media only screen and (min-width: 740px) and (max-width: 980px) {
+    .lojas {
+        max-width: 720px; /* é definido 20 px a mais na quebra, pois no geral as barras de rolagem têm esse valor de tamanho da barra e o browser considera esse um valor do seu site */
+    }
+
+    .lojas-locais img, .lojas-locais > div  {
+        width: 340px;
+    }
+   
+}
+
+@media only screen and (max-width: 739px) {
+    .lojas {
+        max-width: 300px
+    }
+
+    .lojas-locais img, .lojas-locais > div  {
+        width: 300px;
+        margin: 0 auto;
+    }
 }
 
 /* Fim Locais */
@@ -360,6 +453,28 @@ h2.cafe-mineiro {
     outline: none; /* tirando um azul que fica quando clicado o botão */
 }
 
+@media only screen and (min-width: 740px) and (max-width: 980px) {
+    .newsletter-container {
+        max-width: 720px; /* é definido 20 px a mais na quebra, pois no geral as barras de rolagem têm esse valor de tamanho da barra e o browser considera esse um valor do seu site */
+    }
+
+    .newsletter-info, .newsletter form, .newsletter input {
+        width: 340px;
+    }
+
+}
+
+@media only screen and (max-width: 739px) {
+    .newsletter-container {
+        max-width: 300px
+    }
+
+    .newsletter-info, .newsletter form, .newsletter input {
+        width: 300px;
+        margin: 0 auto 20px auto;
+    }
+}
+
 /* Fim Newsletter */
 
 /* Rodapé */
@@ -392,5 +507,17 @@ h2.cafe-mineiro {
     margin: 0 10px;
     display: block;
 }
+
+@media only screen and (max-width: 739px) {
+    .rodape-container {
+        max-width: 300px
+    }
+
+    .rodape-container img,  .rodape-container p  {
+        float: none;
+        margin: 20px 0 20px 0;
+    }
+}
+
 
 /* Fim Rodapé */
